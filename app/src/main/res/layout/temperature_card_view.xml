@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/colorBackgroundTrueColor"
+    android:theme="@style/Theme.MaterialComponents.DayNight"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/solName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Sol">
+        </TextView>
+        <TextView
+            android:id="@+id/solStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@id/solName"
+            app:layout_constraintTop_toBottomOf="@id/solName"
+            tools:text="Start Date" />
+        <TextView
+            android:id="@+id/solEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@id/solStartDate"
+            app:layout_constraintTop_toBottomOf="@id/solStartDate"
+            tools:text="Display Name" />
+        <View
+            android:id="@+id/solLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="@id/solEndDate"
+            app:layout_constraintTop_toBottomOf="@id/solEndDate"
+            android:background="#FFF"/>
+        <TextView
+            android:id="@+id/solTemperatureHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@id/solStartDate"
+            app:layout_constraintTop_toBottomOf="@id/solLine"
+            tools:text="Temperature High" />
+        <TextView
+            android:id="@+id/solTemperatureLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@id/solTemperatureHigh"
+            app:layout_constraintTop_toBottomOf="@id/solTemperatureHigh"
+            tools:text="Temperature Low" />
+        <TextView
+            android:id="@+id/solTemperatureAverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@id/solTemperatureLow"
+            app:layout_constraintTop_toBottomOf="@id/solTemperatureLow"
+            tools:text="Temperature Average" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
